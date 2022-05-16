@@ -154,6 +154,7 @@ lib64
 /saved_model/*
 /final_audio_data_csv/*
 /bg_extra/*
+/unverified/*
 
 
 .DS_Store

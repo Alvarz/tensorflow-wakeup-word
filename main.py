@@ -22,7 +22,7 @@ def speak(audio):
 ##### CONSTANTS ################
 fs = 22050
 seconds = 2
-save_path = "audio_data/"
+save_path = "unverified/"
 model = load_model("./saved_model/WWD.h5")
 
 ##### LISTENING #########
@@ -52,7 +52,7 @@ def prediction(y, myrecording):
         print("Confidence:", prediction[:, 1])
         speak("Hello There?")
         # write it if was sucessfully
-        write(save_path + "_no_verified_" +
+        write(save_path +
               str(time.time()) + ".wav", fs, myrecording)
 
     else:
@@ -62,5 +62,7 @@ def prediction(y, myrecording):
     time.sleep(0.1)
 
 
-if __name__ == "__main__":
-    listener()
+listener()
+
+# if __name__ == "__main__":
+#     listener()
